@@ -56,11 +56,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Groonex";
+    src: url("fonts/Groonex-Slant.ttf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
 body {
-    background-color: rgb(34, 34, 34);
+    background-color: rgb(24, 24, 24);
     color: aliceblue;
     font-family: "Montserrat", sans-serif;
-    padding: 20px 40px;
+    padding: 30px 30px;
 }
 
 .header-container {
@@ -68,6 +75,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    margin-top: -10px;
 }
 
 .mi-inicio {
@@ -97,6 +105,7 @@ body {
 
 .mi-inicio .derecha {
     margin-left: auto;
+    margin-right: -17px;
     font-size: 28px;
     border: none;
     font-weight: 300;
@@ -105,9 +114,8 @@ body {
 .linea-principal {
     border: none;
     height: 2px;
-    margin-top: auto;
     background-color: aliceblue;
-    margin: 20px 0 40px 0;
+    margin-top: -3px;
 }
 
 .subtitulo-header h1 {
@@ -115,18 +123,22 @@ body {
     color: aliceblue;
     font-size: 14px;
     letter-spacing: 3px;
-    margin-bottom: 30px;
+    padding-top: 150px;
+    margin-bottom: -40px;
+    padding-left: 4px;
 }
 
 .hero-container {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    margin-top: 0px;
     margin-bottom: 80px;
 }
 
 .columna-izquierda {
     flex: 1.2;
+
 }
 
 .columna-derecha {
@@ -134,32 +146,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 40px;
+    padding-top: 510px;
+    padding-right: 150px;
 }
 
 h2 {
-    font-family: "InterSemibold", sans-serif;
+    font-family: "InterSemibold", serif;
     font-size: 80px;
-    line-height: 1;
-    letter-spacing: 1px;
+    padding-top: 0px;
+    line-height: 1.02;
+    letter-spacing: 0.5px;
     margin-bottom: 20px;
 }
 
 h3 {
     font-family: "Gragio", sans-serif;
     font-size: 80px;
+    margin-top: -5px;
     margin-bottom: 20px;
-}
-
-#imagen-principal {
-    border-radius: 20px;
-    max-width: 100%;
-    height: auto;
 }
 
 h4 {
     font-family: "HelveticaNeue-Medium", sans-serif;
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 20px;
 }
 
@@ -169,10 +178,9 @@ p {
     margin-bottom: 20px;
 }
 
-.badge-wrapper {
+.info {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
 }
 
 #b3 {
@@ -187,7 +195,9 @@ p {
 
 .seccion-educacion {
     margin-top: 60px;
-    max-width: 800px;
+    max-width: 400px;
+    margin-left: 100px;
+
 }
 
 h5 {
@@ -198,7 +208,7 @@ h5 {
 
 .item-educacion {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 20px;
     margin-bottom: 15px;
 }
@@ -214,7 +224,8 @@ h5 {
 }
 
 .ed-texto {
-    margin-bottom: 0;
+    margin-top: -3px;
+    padding-bottom: 5px;
 }
 
 .hr-separador {
@@ -222,4 +233,14 @@ h5 {
     height: 1px;
     background-color: rgba(240, 248, 255, 0.3);
     margin: 15px 0 25px 0;
+}
+
+.logoprincipal {
+    padding-right: 20px;
+}
+
+#fotocv {
+    max-width: 100%;
+    padding-left: 150px;
+    margin-top: -35px;
 }
