@@ -142,12 +142,13 @@ body {
 }
 
 .columna-derecha {
-    flex: 0.8;
+    flex: 0.9;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 510px;
-    padding-right: 150px;
+    padding-top: 480px;
+    padding-right: 145px;
+    padding-bottom: 30px;
 }
 
 h2 {
@@ -193,24 +194,10 @@ p {
     display: inline-block;
 }
 
-.seccion-educacion {
-    margin-top: 60px;
-    max-width: 400px;
-    margin-left: 100px;
-
-}
-
 h5 {
     font-family: "HelveticaNeue-Medium", sans-serif;
     font-size: 32px;
     margin-bottom: 30px;
-}
-
-.item-educacion {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 15px;
 }
 
 .ed-tag {
@@ -224,14 +211,15 @@ h5 {
 }
 
 .ed-texto {
-    margin-top: -3px;
-    padding-bottom: 5px;
+    font-size: 14px;
+    margin-top: 25px;
+    padding-bottom: 10px;
 }
 
 .hr-separador {
     border: none;
-    height: 1px;
-    background-color: rgba(240, 248, 255, 0.3);
+    height: 2px;
+    background-color: rgba(240, 248, 255, 0.753);
     margin: 15px 0 25px 0;
 }
 
@@ -241,6 +229,25 @@ h5 {
 
 #fotocv {
     max-width: 100%;
-    padding-left: 150px;
+    padding-left: 230px;
     margin-top: -35px;
 }
+
+.columnas {
+    padding-left: 130px;
+    padding-right: 150px;
+    display: flex;
+    column-gap: 105px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+
+#columasinfo {
+    width: 370px;
+}
+
+#icono1 {
+padding-right: 20px;
+padding-bottom: 20px;
+    }
