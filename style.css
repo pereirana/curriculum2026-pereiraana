@@ -67,7 +67,7 @@ body {
     background-color: rgb(24, 24, 24);
     color: aliceblue;
     font-family: "Montserrat", sans-serif;
-    padding: 30px 30px;
+    padding: 35px 35px;
 }
 
 .header-container {
@@ -87,7 +87,7 @@ body {
 
 .mi-inicio a {
     font-family: 'InterSemibold', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: none;
     font-weight: bold;
     color: aliceblue;
@@ -106,7 +106,7 @@ body {
 .mi-inicio .derecha {
     margin-left: auto;
     margin-right: -17px;
-    font-size: 28px;
+    font-size: 34px;
     border: none;
     font-weight: 300;
 }
@@ -173,7 +173,7 @@ h4 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
     margin-bottom: 20px;
 }
