@@ -148,14 +148,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 480px;
+    padding-top: 480px; /*sin ver la página puedo darme cuenta que estás utilizando estos tamaños para acomodar elementos que pueden resolverse con propiedades de flex, como norma general si tenés que setear tamaños mayores a 80px o inclusive si es muy necesario a 100px es porque lo podés resolver con flex, así que esto está mal seteado, y cuando pasemos a responsive te va a traer problemas*/
     padding-right: 145px;
     padding-bottom: 30px;
 }
 
 h2 {
     font-family: "InterSemibold", serif;
-    font-size: 80px;
+    font-size: 80px; /*si te animás, probá utilizar rems para lo que tenga que ver con tamaños tipográficos, si no llegás no pasa nada, lo intentás en el próximo tp*/
     padding-top: 0px;
     line-height: 1.02;
     letter-spacing: 0.5px;
@@ -165,7 +165,7 @@ h2 {
 h3 {
     font-family: "InterBold", sans-serif;
     font-size: 80px;
-    margin-top: -5px;
+    margin-top: -5px; /*esto es un error grave, no se utilizan medidas en negativo porque son una señal de que estás arrastrando un error o que podés resolverlo con otra propiedad tipográfica*/
     margin-bottom: 20px;
 }
 
@@ -236,15 +236,15 @@ h5 {
 
 #fotocv {
     max-width: 100%;
-    padding-left: 230px;
-    margin-top: -35px;
+    padding-left: 230px; /*alerta de que tenés que usar flexbox*/
+    margin-top: -35px; /*alerta de que podés usar otra propiedad*/
 }
 
 .columnas {
     padding-left: 180px;
     padding-right: 100px;
     display: flex;
-    column-gap: 120px;
+    column-gap: 120px; 
     justify-content: center;
     margin-bottom: 80px;
 }
