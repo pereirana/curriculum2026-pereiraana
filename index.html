@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>Pereira Ana | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!--te falta el favicon!!!-->
 </head>
 
 <body>
@@ -30,12 +31,12 @@
         <section id="uno" class="hero-container">
             <div class="columna-izquierda">
                 <h2>COMUNICACIÓN<br>VISUAL &<br><i>CREATIVIDAD</i></h2>
-                <h3>...</h3>
+                <h3>...</h3> <!--esto semánticamente no parece un título, sino un decorado visual podrías utilizar una etiqueta de texto simple para no romper la lógica de los encabezados y darle estilo desde css. esto te va a obligar a cambiar la lógica de las h que estás usando-->
                 <img id="fotocv" src="IMG/download (2).gif" alt="Ana" width="500">
             </div>
 
-            <div class="columna-derecha">
-                <h4>SOBRE MÍ</h4>
+            <div class="columna-derecha"> <!--este div podría ser otra etiqueta semánticamente mejor-->
+                <h4>SOBRE MÍ</h4> <!--los nombres de los ids y clases deben ser descriptivos para que en un trabajo en equipo se puedan entender entre todos, si yo leo b1 no etiendo qué significa ni a qué se refiere o la razón de ser, y de hecho no lo estás utilizando ni para crear links ni para aplicar propiedades css-->
                 <p id="b1">Mi trabajo abarca desde la ilustración digital hasta el desarrollo de sistemas de
                     comunicación
                     adaptables a diversas plataformas e instancias de producción. Me destaco por mi versatilidad para
@@ -44,21 +45,22 @@
                 <p id="b2">Busco integrarme en proyectos desafiantes donde pueda aportar una mirada narrativa y
                     creativa,
                     mientras sigo expandiendo mis capacidades técnicas e interdisciplinarias.</p>
-                <div class="info">
-                    <span id="b3">+ información!!</span>
+                <div class="info"> <!--entiendo que hayas usado este div para que este elemento te quede alineado distinto, pero hay una solución más fácil sin crear tanta etiqueta dentro de etiqueta: desde css a este span agregale "align-self: flex-end"; que te sirve para alinear elementos rompiendo las reglas del padre-->
+                    <span id="b3">+ información!!</span> <!--existe la etiqueta button que va a quedar mucho mejor-->
                 </div>
             </div>
         </section>
 
-        <h6>PERFIL PROFESIONAL ;) </h6>
+        <h6>PERFIL PROFESIONAL ;) </h6> <!--este título es semántincamente más importante que las h5 a continuación porque encabeza estas secciones aunque sea visualmente más pequeña, esto debería ser al revés y ajustarse desde css, además no queda bien que no esté dentro de una etiqueta más grande porque parece suelto-->
 
         <section class="columnas">
             <div id="columasinfo">
                 <h5>/ Educación</h5>
+                <!--a mi me suena a que esta lista de estudios que podría ser otra etiqueta-->
                 <span class="ed-tag">2023 - Actualidad</span>
                 <p class="ed-texto">Licenciatura en Diseño y Comunicación Visual. <i>Universidad Nacional de Lanús</i>
                     (UNLa)</p>
-                <hr class="hr-separador">
+                <hr class="hr-separador"> <!--esto es una etiqueta de diseño, resolvelo desde css-->
                 <span class="ed-tag">2017 - 2022</span>
                 <p class="ed-texto">Bachiller en Ciencias. Sociales. <i>Instituto Santa Inés.</i></p>
                 <hr class="hr-separador">
@@ -66,7 +68,7 @@
                 <p class="ed-texto">Curso de Adobe Photoshop. <i>Universidad Nacional de Lomas De Zamora (UNLZ)</i></p>
             </div>
 
-            <div id="columasinfo">
+            <div id="columasinfo"> <!--no es correcto repetir ids, lo vimos en clases!-->
                 <h5>/ Experiencia</h5>
                 <span class="ed-tag">2023 - Actualidad</span>
                 <p class="ed-texto">Licenciatura en Diseño y Comunicación Visual. <i>Universidad Nacional de Lanús</i>
@@ -82,7 +84,7 @@
             <div id="columaskills">
                 <h5>/ Herramientas</h5>
                 <p class="ed-texto">Paquete Adobe + Ilustración digital</p>
-                <img id="icono1" src="IMG/H1BLANCO.png" alt="ind" width="70px">
+                <img id="icono1" src="IMG/H1BLANCO.png" alt="ind" width="70px"> <!--repetís ids!!!-->
                 <img id="icono1" src="IMG/H2BLANCO.png" alt="illus" width="70px">
                 <img id="icono1" src="IMG/H6BLANCO.png" alt="krita" width="70px">
                 <img id="icono1" src="IMG/H3BLANCO.png" alt="psd" width="70px">
@@ -90,7 +92,7 @@
                 <img id="icono1" src="IMG/H5BLANCO.png" alt="lightroom" width="70px">
                 <img id="icono1" src="IMG/H7BLANCO.png" alt="sai" width="70px">
                 <p class="ed-texto">Habilidades Técnicas | Paquete Microsoft Office</p>
-                <ul">
+                <ul"> <!--mal escrita la etiqueta-->
                     <li class="listado">Excel</li>
                     <li class="listado">Word</li>
                     <li class="listado">PowerPoint</li>
@@ -101,7 +103,7 @@
 
     <footer class="extra">
         <div class="redes">
-            <a href="index.html"><img src="IMG/YTLOGO.png" alt="YT" width="40px"></a>
+            <a href="index.html"><img src="IMG/YTLOGO.png" alt="YT" width="40px"></a> <!--en los enlaces que lleven a un sitio externo es bueno agregar el atributo target="_blank" para que los mismos se abran en otra pestaña y no perder tu página, dicho esto, estaría bueno que utilices links externos aunque sean falsos para demostrar que lo sabés-->
             <a href="index.html"><img src="IMG/IGLOGO.png" alt="IG" width="40px"></a>
             <a href="index.html"><img src="IMG/TLGLOGO.png" alt="telegram" width="40px"></a>
             <a href="index.html"><img src="IMG/WPPLOGO.png" alt="wpp" width="40px"></a>
