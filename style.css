@@ -22,13 +22,6 @@
 }
 
 @font-face {
-    font-family: "Gragio";
-    src: url("fonts/Gragio.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "HelveticaNeue-Medium";
     src: url("fonts/HelveticaNeue-Medium.otf") format("opentype");
     font-weight: bold;
@@ -57,160 +50,299 @@
 }
 
 @font-face {
-    font-family: "Groonex";
-    src: url("fonts/Groonex-Slant.ttf") format("opentype");
+    font-family: "MontserratMedium";
+    src: url("fonts/MontserratAlternates-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Superbusy";
+    src: url("fonts/SuperbusyActivity-Outline.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kartis";
+    src: url("fonts/Kartis.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
 }
 
 body {
+    margin: 0;
     background-color: rgb(21, 21, 21);
-    color: rgb(243, 243, 243);
+    color: rgb(239, 236, 227);
     font-family: "Montserrat", sans-serif;
-    padding: 35px 35px;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    margin-top: -13px;
-}
-
-.mi-inicio {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-    width: 100%;
-}
-
-.mi-inicio a {
-    font-family: 'InterBold', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(243, 243, 243);
-    border: 2.8px solid rgb(243, 243, 243);
-    border-radius: 100px;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-}
-
-.mi-inicio a:hover {
-    background-color: rgb(243, 243, 243);
-    color: rgb(243, 243, 243);
-    box-shadow: 0 0 15px rgb(243, 243, 243);
-}
-
-.mi-inicio .derecha {
-    font-family: 'InterBold', sans-serif;
-    margin-left: auto;
-    margin-right: -17px;
-    font-size: 35px;
-    border: none;
-    font-weight: 300;
-    pointer-events: none;
-}
-
-.linea-principal {
-    border: none;
-    height: 3px;
-    background-color: rgb(243, 243, 243);
-    margin-top: -3px;
-}
-
-.subtitulo-header h1 {
-    font-family: "InterLight", sans-serif;
-    color: rgb(243, 243, 243);
-    font-size: 14px;
-    letter-spacing: 3px;
-    padding-top: 150px;
-    margin-bottom: -40px;
-    padding-left: 4px;
-}
-
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    margin-top: 0px;
-    margin-bottom: 80px;
-}
-
-.columna-izquierda {
-    flex: 1.2;
-
-}
-
-.columna-derecha {
-    flex: 0.9;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 480px;
-    padding-right: 145px;
-    padding-bottom: 30px;
-}
-
-h2 {
-    font-family: "InterSemibold", serif;
-    font-size: 80px;
-    padding-top: 0px;
-    line-height: 1.02;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-family: "InterBold", sans-serif;
-    font-size: 80px;
-    margin-top: -5px;
-    margin-bottom: 20px;
-}
-
-h4 {
-    font-family: "InterBold", sans-serif;
-    font-size: 35px;
-    margin-bottom: 20px;
-    text-decoration: underline;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 5px;
+    margin-top: 9px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 p {
     font-size: 16px;
     line-height: 1.7;
-    margin-bottom: 20px;
 }
 
-.info {
+html {
+    scroll-behavior: smooth;
+}
+
+/* BARRA DE NAVEGACIÓN */
+.header-container {
+    margin-top: 40px;
+    margin-left: 160px;
+    margin-right: 160px;
+    background-color: rgb(21, 21, 21);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px 6px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 60px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 2.8px solid rgb(239, 236, 227);
 }
 
-#b3 {
+.nav-principal {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.nav-principal a {
     font-family: 'InterBold', sans-serif;
-    color: rgb(21, 21, 21);
-    font-size: 12px;
-    background-color: rgb(243, 243, 243);
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(239, 236, 227);
+    border: 2.8px solid rgb(239, 236, 227);
     border-radius: 100px;
-    padding: 8px 20px;
-    display: inline-block;
+    padding: 7px 13px;
+    transition: all 0.3s ease;
 }
 
-h5 {
+.nav-principal a:hover {
+    background-color: rgb(247, 105, 235);
+    color: rgb(239, 236, 227);
+    box-shadow: 0 0 15px rgb(239, 236, 227);
+}
+
+.nav-principal .nav-derecha {
+    font-family: 'Kartis', sans-serif;
+    color: rgb(247, 105, 235);
+    margin-left: auto;
+    margin-right: -9px;
+    font-size: 30px;
+    border: none;
+    font-weight: 300;
+    pointer-events: none;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+.header-logo {
+    padding-top: 2px;
+    padding-left: 2px;
+    padding-right: 13px;
+    margin-top: 0px;
+}
+
+/* VOLANTA Y TITULAR */
+.hero-container {
+    margin-top: 0px;
+    padding-left: 160px;
+    padding-top: 160px
+}
+
+h2 {
+    font-family: "InterLight", sans-serif;
+    color: rgb(247, 105, 235);
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.destacado {
+    font-family: "Kartis", sans-serif;
+    letter-spacing: 4px;
+    font-size: 87px;
+    color: rgb(247, 105, 235);
+    padding-top: 5px;
+}
+
+.destacado-presentacion {
+    font-family: "InterBold", sans-serif;
+    color: rgb(247, 105, 235);
+}
+
+h1,
+.elemento-decorativo {
+    font-family: "InterSemibold", serif;
+    font-size: 80px;
+    line-height: 1.02;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+.elemento-decorativo {
+    line-height: 0;
+    padding-bottom: 60px;
+}
+
+
+/* MI PRESENTACIÓN */
+.perfil {
+    padding-left: 140px;
+    padding-right: 160px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    column-gap: 80px;
+    justify-content: center;
+    margin-bottom: 80px;
+    background-color: rgb(239, 236, 227);
+    /* Animación y efectos extra */
+    animation: difuminarScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 10% exit 90%;
+}
+
+
+@keyframes difuminarScroll {
+    0% {
+        opacity: 0;
+        filter: blur(8px);
+        transform: translateY(60px) scale(0.95);
+    }
+
+    35%,
+    65% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(-30px) scale(0.95);
+    }
+}
+
+h4 {
+    color: rgb(21, 21, 21);
+    font-family: "Kartis", sans-serif;
+    font-size: 65px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    text-decoration: underline wavy rgb(247, 105, 235);
+    text-decoration-thickness: 8px;
+    text-underline-offset: 12px;
+    display: inline-block;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+#b1,
+#b2 {
+    width: 550px;
+    font-family: 'InterRegular', sans-serif;
+    color: rgb(21, 21, 21);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+#b1 {
+    margin-bottom: 0px;
+}
+
+.descarga-cv {
+    font-family: 'InterBold', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(239, 236, 227);
+    background-color: rgb(247, 105, 235);
+    border-radius: 100px;
+    padding: 13px 20px;
+}
+
+.foto-perfil {
+    mix-blend-mode: multiply;
+    padding-left: 30px;
+}
+
+/* PERFIL Y COLUMNAS */
+
+.titulo-formacion {
+    text-align: center;
+    padding-top: 50px;
+    text-decoration: underline;
+    text-underline-offset: 9px;
+    padding-bottom: 50px;
+}
+
+
+.lista-curriculum,
+.lista-office {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.formacion {
+    padding-left: 230px;
+    padding-right: 210px;
+    display: flex;
+    column-gap: 90px;
+    justify-content: center;
+    margin-bottom: 130px;
+    display: grid;
+    grid-template-columns: 1.4fr 1.5fr 1.8fr;
+}
+
+h3 {
     font-family: "InterBold", sans-serif;
     font-size: 32px;
     margin-bottom: 30px;
 }
 
+.item-curriculum {
+    border-bottom: 1px solid rgb(247, 105, 235);
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.item-curriculum:last-child {
+    border-bottom: none;
+}
+
 .ed-tag {
     font-family: 'InterSemibold', sans-serif;
     color: rgb(21, 21, 21);
-    ;
     font-size: 15px;
-    background-color: rgb(243, 243, 243);
+    background-color: rgb(239, 236, 227);
     border-radius: 110px;
     padding: 7px 18px;
     white-space: nowrap;
@@ -219,72 +351,56 @@ h5 {
 .ed-texto {
     margin-top: 25px;
     padding-bottom: 10px;
-    font-size: 14px;
+    font-size: 13.5px;
 }
 
-.hr-separador {
-    border: none;
-    height: 1px;
-    background-color: rgb(243, 243, 243);
-    margin: 15px 0 42.4px 0;
+.destacado-curriculum {
+    font-size: 16px;
+    color: rgb(247, 105, 235);
 }
 
-.logoprincipal {
-    padding-right: 22px;
-    margin-top: 0px;
+
+#listado-skills {
+    width: 60%
 }
 
-#fotocv {
-    max-width: 100%;
-    padding-left: 230px;
-    margin-top: -35px;
+.skill-icon {
+    padding-right: 27px;
+    padding-bottom: 21px;
 }
 
-.columnas {
-    padding-left: 180px;
-    padding-right: 100px;
-    display: flex;
-    column-gap: 120px;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-#columasinfo {
-    width: 450px;
-}
-
-#columnaskills {
-    width: 362px;
-}
-
-#icono1 {
-    padding-right: 28px;
-    padding-bottom: 29px;
-}
-
-h6 {
-    font-family: "InterLight", sans-serif;
-    font-size: 14px;
-    letter-spacing: 3px;
-    text-align: center;
-    padding-top: 90px;
-    text-decoration: underline;
-    text-underline-offset: 9px;
-}
-
-.listado {
+#listado-adobe {
     font-size: 14px;
     text-decoration: none;
 }
 
-.extra {
-    width: 100%;
-    padding-top: 90px;
+.listado-office {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    column-gap: 20px;
 }
 
-.redes {
+/* CONTACTO */
+
+.footer-container {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(247, 105, 235);
+    padding: 25px 40px;
     display: flex;
-    column-gap: 25px;
-    justify-content: center;
-    margin-bottom: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-texto {
+    font-family: "InterBold";
+    font-size: 20px;
+}
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
