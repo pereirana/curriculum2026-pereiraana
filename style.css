@@ -22,13 +22,6 @@
 }
 
 @font-face {
-    font-family: "Gragio";
-    src: url("fonts/Gragio.ttf") format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "HelveticaNeue-Medium";
     src: url("fonts/HelveticaNeue-Medium.otf") format("opentype");
     font-weight: bold;
@@ -56,170 +49,532 @@
     font-style: normal;
 }
 
-body {
-    background-color: rgb(34, 34, 34);
-    color: aliceblue;
-    font-family: "Montserrat", sans-serif;
-    padding: 20px 40px;
+@font-face {
+    font-family: "MontserratMedium";
+    src: url("fonts/MontserratAlternates-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.mi-inicio {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-}
-
-.mi-inicio a {
-    font-family: 'InterSemibold', sans-serif;
-    font-size: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: aliceblue;
-    border: 2px solid aliceblue;
-    border-radius: 100px;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-}
-
-.mi-inicio a:hover {
-    background-color: aliceblue;
-    color: #000000;
-    box-shadow: 0 0 15px aliceblue;
-}
-
-.mi-inicio .derecha {
-    margin-left: auto;
-    font-size: 28px;
-    border: none;
+@font-face {
+    font-family: "Superbusy";
+    src: url("fonts/SuperbusyActivity-Outline.otf") format("opentype");
     font-weight: 300;
+    font-style: normal;
 }
 
-.linea-principal {
-    border: none;
-    height: 2px;
-    margin-top: auto;
-    background-color: aliceblue;
-    margin: 20px 0 40px 0;
+@font-face {
+    font-family: "Kartis";
+    src: url("fonts/Kartis.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
 }
 
-.subtitulo-header h1 {
-    font-family: "InterLight", sans-serif;
-    color: aliceblue;
-    font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 30px;
+@font-face {
+    font-family: "AOTSerialMono";
+    src: url("fonts/AOTSerialMono-SemiBold\ -\ copia.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
 }
 
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    margin-bottom: 80px;
-}
-
-.columna-izquierda {
-    flex: 1.2;
-}
-
-.columna-derecha {
-    flex: 0.8;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 40px;
-}
-
-h2 {
-    font-family: "InterSemibold", sans-serif;
-    font-size: 80px;
-    line-height: 1;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-family: "Gragio", sans-serif;
-    font-size: 80px;
-    margin-bottom: 20px;
-}
-
-#imagen-principal {
-    border-radius: 20px;
+body {
+    margin: 0;
+    background-color: #100F0F;
+    color: rgb(239, 236, 227);
+    font-family: "Montserrat", sans-serif;
     max-width: 100%;
-    height: auto;
-}
-
-h4 {
-    font-family: "HelveticaNeue-Medium", sans-serif;
-    font-size: 28px;
-    margin-bottom: 20px;
+    overflow-x: hidden;
 }
 
 p {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.7;
-    margin-bottom: 20px;
 }
 
-.badge-wrapper {
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+
+.header-container {
+    width: 100%;
+    max-width: 1800px;
+    margin: 10px auto 0 auto;
+    padding: 12px 3%;
+    background-color: transparent;
+    border: none;
     display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-sizing: border-box;
 }
 
-#b3 {
-    font-family: 'InterBold', sans-serif;
-    color: rgb(34, 34, 34);
-    font-size: 12px;
-    background-color: aliceblue;
-    border-radius: 100px;
-    padding: 8px 20px;
-    display: inline-block;
-}
-
-.seccion-educacion {
-    margin-top: 60px;
-    max-width: 800px;
-}
-
-h5 {
-    font-family: "HelveticaNeue-Medium", sans-serif;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-.item-educacion {
+.header-left {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 15px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 45px;
+    height: auto;
+    display: block;
+}
+
+.nav-derecha {
+    font-family: 'Kartis', sans-serif;
+    color: #EFECE3;
+    font-size: clamp(20px, 2vw, 30px);
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+    white-space: nowrap;
+}
+
+.nav-principal {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-principal a {
+    font-family: 'InterBold', sans-serif;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    font-weight: bold;
+    color: rgb(239, 236, 227);
+    white-space: nowrap;
+}
+
+.nav-principal a:hover {
+    color: #f769eb;
+    text-decoration-color: #f769eb;
+    text-decoration-style: wavy;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-contacto {
+    font-family: 'InterBold', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(239, 236, 227);
+    border: 2px solid rgb(239, 236, 227);
+    border-radius: 100px;
+    padding: 8px 12px;
+    background: transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-contacto:hover {
+    background-color: #f769eb;
+    border-color: #f769eb;
+    box-shadow: 0 0 15px #f769eb;
+}
+
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .header-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-principal {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* VOLANTA Y TITULAR */
+.hero-container {
+    margin-top: 0px;
+    padding-left: 160px;
+    padding-top: 160px
+}
+
+h2 {
+    font-family: "InterLight", sans-serif;
+    color: #f769eb;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.destacado {
+    font-family: "Kartis", sans-serif;
+    letter-spacing: 4px;
+    font-size: 87px;
+    padding-top: 5px;
+    animation: cambiarColorDinamico 0.5s infinite linear;
+}
+
+@keyframes cambiarColorDinamico {
+    0% {
+        color: #f769eb;
+    }
+
+    33% {
+        color: #2F4CF6;
+    }
+
+    66% {
+        color: #EDEC78;
+    }
+
+    100% {
+        color: #f769eb;
+    }
+}
+
+.destacado-presentacion {
+    font-family: "InterBold", sans-serif;
+    color: #f769eb;
+}
+
+h1,
+.elemento-decorativo {
+    font-family: "InterSemibold", serif;
+    font-size: 80px;
+    line-height: 1.02;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+.elemento-decorativo {
+    line-height: 0;
+    padding-bottom: 60px;
+}
+
+
+/* MI PRESENTACIÓN */
+.perfil {
+    padding-left: 140px;
+    padding-right: 160px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    column-gap: 80px;
+    justify-content: center;
+    margin-bottom: 80px;
+    background-color: rgb(239, 236, 227);
+    /* Animación y efectos extra */
+    animation: difuminarScroll linear both;
+    animation-timeline: view();
+    animation-range: entry 10% exit 90%;
+}
+
+
+@keyframes difuminarScroll {
+    0% {
+        opacity: 0;
+        filter: blur(8px);
+        transform: translateY(60px) scale(0.95);
+    }
+
+    35%,
+    65% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateY(-30px) scale(0.95);
+    }
+}
+
+h4 {
+    color: rgb(21, 21, 21);
+    font-family: "Kartis", sans-serif;
+    font-size: 65px;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    text-decoration: underline wavy #f769eb;
+    text-decoration-thickness: 8px;
+    text-underline-offset: 12px;
+    display: inline-block;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+#b1,
+#b2 {
+    width: 550px;
+    font-family: 'InterRegular', sans-serif;
+    color: rgb(21, 21, 21);
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+#b1 {
+    margin-bottom: 0px;
+}
+
+.descarga-cv {
+    font-family: 'InterBold', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(239, 236, 227);
+    background-color: #f769eb;
+    border-radius: 100px;
+    padding: 13px 20px;
+}
+
+.foto-perfil {
+    mix-blend-mode: darken;
+    padding-left: 30px;
+}
+
+
+/* ANIMACIÓN CINTA */
+.cinta-marquee {
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-top: 2.3px solid rgb(239, 236, 227);
+    border-bottom: 2.3px solid rgb(239, 236, 227);
+    overflow: hidden;
+    padding-bottom: 3px;
+    padding-top: 10px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.cinta-track {
+    display: flex;
+    width: max-content;
+    animation: moverCinta 8s linear infinite;
+}
+
+.grupo-texto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.grupo-texto span {
+    font-family: "AOTSerialMono", sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: rgb(239, 236, 227);
+}
+
+@keyframes moverCinta {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* PERFIL Y COLUMNAS */
+.titulo-formacion {
+    text-align: center;
+    padding-top: 50px;
+    text-decoration: underline;
+    text-underline-offset: 9px;
+    padding-bottom: 50px;
+}
+
+.lista-curriculum,
+.lista-office {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.formacion {
+    padding-left: 270px;
+    padding-right: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 90px;
+    margin-bottom: 130px;
+}
+
+
+.listado-skills,
+#listado-adobe {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    font-family: "InterBold", sans-serif;
+    font-size: 27px;
+    margin-bottom: 30px;
+}
+
+.item-curriculum {
+    border-bottom: 1px solid #f769eb;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.item-curriculum:last-child {
+    border-bottom: none;
 }
 
 .ed-tag {
     font-family: 'InterSemibold', sans-serif;
-    color: rgb(34, 34, 34);
-    font-size: 13px;
-    background-color: aliceblue;
-    border-radius: 100px;
-    padding: 4px 12px;
+    color: rgb(21, 21, 21);
+    font-size: 15px;
+    background-color: rgb(239, 236, 227);
+    border-radius: 110px;
+    padding: 7px 18px;
     white-space: nowrap;
 }
 
 .ed-texto {
-    margin-bottom: 0;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    font-size: 13.5px;
 }
 
-.hr-separador {
-    border: none;
-    height: 1px;
-    background-color: rgba(240, 248, 255, 0.3);
-    margin: 15px 0 25px 0;
+.destacado-curriculum {
+    font-size: 16px;
+    color: #f769eb;
+}
+
+.skill-icon {
+    padding-right: 27px;
+    padding-bottom: 21px;
+}
+
+#listado-adobe {
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.listado-office {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+/* CONTACTO */
+/* Contenedor general del footer*/
+.footer-container {
+    width: 100%;
+    background-color: rgb(21, 21, 21);
+    border-top: 2px solid rgb(239, 236, 227);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Franja Superior */
+.footer-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5% 20px 5%;
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 2px solid rgb(239, 236, 227);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.palabra-color {
+    font-family: 'Kartis', sans-serif;
+    color: rgb(247, 105, 235);
+}
+
+.footer-elemento-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-estrella {
+    height: auto;
+    display: block;
+}
+
+.footer-info {
+    max-width: 400px;
+    font-size: 13px;
+    color: rgb(239, 236, 227);
+    line-height: 1.5;
+}
+
+.footer-contacto-link {
+    font-family: 'InterBold', sans-serif;
+    color: rgb(247, 105, 235);
+}
+
+/* Franja Inferior (Copyright y Redes) */
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5% 70px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.copy-destacado {
+    font-family: 'InterBold', sans-serif;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-redes img {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+    transform: scale(1.1);
 }
