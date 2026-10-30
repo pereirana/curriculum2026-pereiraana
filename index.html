@@ -8,11 +8,13 @@
     <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
-    <!-- BARRA DE NAVEGACIÓN -->
-    <header class="header-container">
 
-        <!-- Lado Izquierdo: Logo y Archivo '26 -->
+<body>
+    <div class="preloader">
+        <img src="IMG/preloader.png" alt="Cargando...">
+    </div>
+
+    <header class="header-container">
         <div class="header-left">
             <a href="#" class="header-logo">
                 <img src="IMG/gif-index.gif" alt="Logo Estrella" />
@@ -20,51 +22,79 @@
             <a href="#" class="nav-derecha">Archivo '26</a>
         </div>
 
-        <!-- Centro: Enlaces de navegación -->
+        <!-- MENÚ ALTERNATIVO -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- ENLACES NAV -->
         <nav class="nav-principal">
-            <a href="#">SOBRE_MÍ</a>
-            <a href="#">ILUSTRACIONES</a>
+            <a href="index.html" class="botón-activo">SOBRE_MÍ</a>
+            <a href="ilustraciones.html">ILUSTRACIONES</a>
             <a href="#">DISEÑO GRÁFICO</a>
         </nav>
 
-        <!-- Lado Derecho: Botón de contacto -->
+
+        <!-- LADO DERECHO -->
         <div class="header-right">
-            <a href="#" class="nav-contacto">CONTÁCTAME <span class="arrow">→</span></a>
+            <a href="contacto.html" class="nav-contacto">CONTÁCTAME <span class="arrow">→</span></a>
         </div>
-
     </header>
-    <main>
 
+    <main>
         <!-- VOLANTA Y TITULAR -->
         <section class="hero-container">
             <h2>ANA PEREIRA — DISEÑO E ILUSTRACIÓN · BUENOS AIRES</h2>
             <h1>ILUSTRACIÓN<br>DIGITAL &<br><span class="destacado">SISTEMAS</span> VISUALES</h1>
-            <p class="elemento-decorativo">...</p>
+            <p class="elemento-decorativo">⋆˙</p>
         </section>
 
         <!-- MI PRESENTACIÓN -->
-        <section class="perfil">
-            <div class="foto-perfil">
-                <img src="IMG/gif-sobre_mi.gif" alt="Ana" width="550">
+        <section class="sobre-mi">
+            <div class="perfil">
+                <img src="IMG/gif-sobre_mi.gif" alt="Ana" width="550" class="foto-perfil">
+                <div class="columna-perfil">
+                    <h4>Sobre mí</h4>
+                    <p id="b1"><span class="destacado-presentacion"> ¡Hola! Soy Ana Pereira, diseñadora en formación y
+                            amante del
+                            dibujo.
+                        </span> Me muevo entre la ilustración digital y el desarrollo de sistemas de comunicación que se
+                        adaptan a distintas plataformas y formatos. Me apasiona enfrentar restricciones técnicas y
+                        conceptuales exigentes sin perder nunca de vista la estética ni el cuidado por el detalle.</p>
+                    <p id="b2">Busco sumarme a proyectos desafiantes donde pueda aportar una mirada creativa y
+                        narrativa,
+                        mientras sigo aprendiendo y conectando diferentes disciplinas.</p>
+                    <a href="ilustraciones.html" class="proyectos-perfil"> PROYECTOS <span class="arrow">→</span></a>
+                </div>
             </div>
-            <div class="columna-perfil">
-                <h4>Sobre mí</h4>
-                <p id="b1"><span class="destacado-presentacion"> ¡Hola! Soy Ana Pereira, estudiante de diseño y
-                        entusiasta del arte.</span> Mi trabajo
-                    abarca desde la ilustración digital hasta el desarrollo de sistemas de
-                    comunicación adaptables a diversas plataformas e instancias de producción. Me destaco por mi
-                    versatilidad para
-                    trabajar bajo restricciones técnicas y conceptuales exigentes, manteniendo siempre un alto criterio
-                    estético.</p>
-                <p id="b2">Busco integrarme en proyectos desafiantes donde pueda aportar una mirada narrativa y
-                    creativa,
-                    mientras sigo expandiendo mis capacidades técnicas e interdisciplinarias.</p>
-                <a href="#" class="descarga-cv">+ Mi CV!!</a>
+
+            <!-- CURIOSIDADES SOBRE MÍ -->
+            <h2 class="curiosidades-titular">Algunos datos (in)útiles...</h2>
+            <div class="curiosidades-container">
+                <div class="curiosidades-item">
+                    <img src="IMG/sudoku.png" alt="curiosidad1" class="img-normal" width="180">
+                    <img src="IMG/sudoku_v2.png" alt="curiosidad2-hover" class="img-hover" width="180">
+                    <p>MASTER DEL SUDOKU</p>
+                </div>
+                <div class="curiosidades-item">
+                    <img src="IMG/gatito.png" alt="curiosidad2" class="img-normal" width="180">
+                    <img src="IMG/gatito_v2.png" alt="curiosidad2-hover" class="img-hover" width="180">
+                    <p>PERSONA DE GATOS</p>
+                </div>
+                <div class="curiosidades-item">
+                    <img src="IMG/libro.png" alt="curiosidad2" class="img-normal" width="180">
+                    <img src="IMG/libro_v2.png" alt="curiosidad2-hover" class="img-hover" width="180">
+                    <p>LECTORA COMPULSIVA</p>
+                </div>
             </div>
         </section>
 
+
         <!-- CINTA ANIMADA DE TEXTO -->
-        <div class="cinta-marquee">
+        <section class="cinta-marquee">
             <div class="cinta-track">
                 <!-- Primer bloque de texto -->
                 <div class="grupo-texto">
@@ -97,78 +127,94 @@
                     <span class="punto">·</span>
                 </div>
             </div>
-        </div>
-
-        <!-- PERFIL Y COLUMNAS -->
-        <h2 class="titulo-formacion">PERFIL PROFESIONAL ;) </h2>
-        <section class="formacion">
-            <div class="listado-skills">
-                <h3>/ Educación</h3>
-                <ul class="lista-curriculum">
-                    <li class="item-curriculum">
-                        <span class="ed-tag">2023 - Actualidad</span>
-                        <p class="ed-texto"><span class="destacado-curriculum">Licenciatura en Diseño y
-                                Comunicación Visual.</span> Universidad Nacional de Lanús.</p>
-                    </li>
-                    <li class="item-curriculum">
-                        <span class="ed-tag">2017 - 2022</span>
-                        <p class="ed-texto"><span class="destacado-curriculum"> Bachiller en Cs.
-                                Sociales.</span> Instituto Santa Inés de Turdera.</p>
-
-                    </li>
-                    <li class="item-curriculum">
-                        <span class="ed-tag">2017 - 2022</span>
-                        <p class="ed-texto"><span class="destacado-curriculum">Curso de Adobe
-                                Photoshop.</span> Universidad Nacional de Lomas De Zamora.</p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="listado-skills">
-                <h3>/ Experiencia</h3>
-                <ul class="lista-curriculum">
-                    <li class="item-curriculum">
-                        <span class="ed-tag">2024 - Actualidad</span>
-                        <p class="ed-texto"><span class="destacado-curriculum">Diseñadora & Ilustradora
-                                Freelance</span><br>Desarrollo de proyectos visuales independientes, abarcando desde la
-                            ilustración digital hasta el diseño de piezas tipográficas y sistemas de comunicación
-                            visual.</p>
-                    </li>
-                    <li class="item-curriculum">
-                        <span class="ed-tag">2024 & 2025</span>
-                        <p class="ed-texto"><span class="destacado-curriculum"> Ilustradora Colaboradora — Proyecto La
-                                Maratón.</span><br>Participación en la creación e ilustración de piezas visuales para el
-                            proyecto colectivo La Maratón, trabajando en concepto, narrativa visual y composición.</p>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="listado-adobe">
-                <h3>/ Herramientas</h3>
-                <!-- Grupo 1-->
-                <p class="ed-texto"><span class="destacado-curriculum">Paquete Adobe + Ilustración digital</span></p>
-                <div class="contenedor-iconos">
-                    <img class="skill-icon" src="IMG/icono-indesign.png" alt="InDesign" width="50">
-                    <img class="skill-icon" src="IMG/icono-iIllustrator.png" alt="Illustrator" width="50">
-                    <img class="skill-icon" src="IMG/icono-krita.png" alt="Krita" width="50">
-                    <img class="skill-icon" src="IMG/icono-photoshop.png" alt="Photoshop" width="50">
-                    <img class="skill-icon" src="IMG/icono-aftereffects.png" alt="AfterEffects" width="50">
-                    <img class="skill-icon" src="IMG/icono-lightroom.png" alt="Lightroom" width="50">
-                    <img class="skill-icon" src="IMG/icono-sai.png" alt="Paint Tool Sai" width="50">
-                    <img class="skill-icon" src="IMG/icono-figma.png" alt="Figma" width="50">
-                </div>
-
-                <!-- Grupo 2-->
-                <p class="ed-texto"><span class="destacado-curriculum">Habilidades Técnicas | Paquete Microsoft
-                        Office</span></p>
-                <ul class="listado-office">
-                    <li>/ Excel</li>
-                    <li>/ Word</li>
-                    <li>/ PowerPoint</li>
-                </ul>
-            </div>
         </section>
 
+
+        <!-- PERFIL Y COLUMNAS -->
+        <section class="curriculum">
+            <h2 class="titulo-formacion">PERFIL PROFESIONAL ;) </h2>
+            <div class="formacion">
+                <div class="listado-skills">
+                    <h3>/ <span class="palabra-color">EDUCACIÓN</span></h3>
+                    <ul class="lista-curriculum">
+                        <li class="item-curriculum">
+                            <span class="ed-tag">2023 - Actualidad</span>
+                            <p class="ed-texto"><span class="destacado-curriculum">Licenciatura en Diseño y
+                                    Comunicación Visual.</span> Universidad Nacional de Lanús.</p>
+                        </li>
+
+                        <li class="item-curriculum">
+                            <span class="ed-tag">2022</span>
+                            <p class="ed-texto"><span class="destacado-curriculum">Curso de Adobe
+                                    Photoshop.</span> Universidad Nacional de Lomas De Zamora.</p>
+                        </li>
+
+                        <li class="item-curriculum">
+                            <span class="ed-tag">2017 - 2022</span>
+                            <p class="ed-texto"><span class="destacado-curriculum"> Bachiller en Cs.
+                                    Sociales.</span> Instituto Santa Inés de Turdera.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="listado-skills">
+                    <h3>/ <span class="palabra-color">EXPERIENCIA</span></h3>
+                    <ul class="lista-curriculum">
+                        <li class="item-curriculum">
+                            <span class="ed-tag">2024 - Actualidad</span>
+                            <p class="ed-texto"><span class="destacado-curriculum">Diseñadora & Ilustradora
+                                    Freelance</span><br>Desarrollo de proyectos visuales independientes, abarcando desde
+                                la
+                                ilustración digital hasta el diseño de piezas tipográficas y sistemas de comunicación
+                                visual.</p>
+                        </li>
+                        <li class="item-curriculum">
+                            <span class="ed-tag">2024 & 2025</span>
+                            <p class="ed-texto"><span class="destacado-curriculum"> Ilustradora Colaboradora — Proyecto
+                                    La
+                                    Maratón.</span><br>Participación en la creación e ilustración de piezas visuales
+                                para el
+                                proyecto colectivo La Maratón, trabajando en concepto, narrativa visual y composición.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <div id="listado-adobe">
+                    <h3>/ <span class="palabra-color">HERRAMIENTAS</span></h3>
+
+                    <div>
+                        <p class="ed-texto"><span class="destacado-curriculum">Paquete Adobe + Ilustración
+                                digital</span>
+                        </p>
+                        <div class="contenedor-iconos">
+                            <img class="skill-icon" src="IMG/icono-indesign.png" alt="InDesign" width="50">
+                            <img class="skill-icon" src="IMG/icono-iIllustrator.png" alt="Illustrator" width="50">
+                            <img class="skill-icon" src="IMG/icono-photoshop.png" alt="Photoshop" width="50">
+                            <img class="skill-icon" src="IMG/icono-aftereffects.png" alt="AfterEffects" width="50">
+                            <img class="skill-icon" src="IMG/icono-lightroom.png" alt="Lightroom" width="50">
+                            <img class="skill-icon" src="IMG/icono-krita.png" alt="Krita" width="50">
+                            <img class="skill-icon" src="IMG/icono-vsc.png" alt="Visual" width="50">
+                            <img class="skill-icon" src="IMG/icono-figma.png" alt="Figma" width="50">
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="ed-texto"><span class="destacado-curriculum">Habilidades Técnicas | Microsoft
+                                Office</span></p>
+                        <ul class="listado-office">
+                            <li>Excel</li>
+                            <li>Word</li>
+                            <li>PowerPoint</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <!-- CONTACTO -->
@@ -179,19 +225,19 @@
                 <h3>¿Creamos <span class="palabra-color">JUNTOS</span>?</h3>
             </div>
 
-            <div class="footer-elemento-central">
-                <img src="IMG/gif-index.gif" alt="Estrella" class="footer-estrella" width="80"> 
-            </div>
-
-            <div class="footer-info">
-                <p>/ Actualmente disponible para proyectos freelance, colaboraciones de ilustración y diseño de
-                    identidad visual. <span class="footer-contacto-link">¡HABLEMOS!...</span></p>
+            <div class="footer-derecha">
+                <img src="IMG/gif-index.gif" alt="Estrella" class="footer-estrella" width="80">
+                <p class="footer-info">/ Actualmente disponible para proyectos freelance, colaboraciones de ilustración
+                    y diseño de identidad visual. <span class="footer-contacto-link">¡HABLEMOS!...</span></p>
             </div>
         </div>
 
         <!-- Franja Inferior -->
         <div class="footer-inferior">
-            <p><span class="copy-destacado">&copy; 2026 — Hecho con diseño y café.</span> Todos los derechos reservados.</p>
+            <p>
+                <span class="copy-destacado">&copy; 2026 – Hecho con diseño y café.</span> Todos los derechos
+                reservados.
+            </p>
             <div class="footer-redes">
                 <a href="https://instagram.com" target="_blank"><img src="IMG/icono-instagram.png" alt="Instagram"
                         width="39"></a>

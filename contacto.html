@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pereira Ana | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/IMG/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="header-container">
+
+        <!-- Lado Izquierdo: Logo y Archivo '26 -->
+        <div class="header-left">
+            <a href="#" class="header-logo">
+                <img src="IMG/gif-index.gif" alt="Logo Estrella" />
+            </a>
+            <a href="#" class="nav-derecha">Archivo '26</a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <!-- CMenú alternativo -->
+        <label for="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Centro: Enlaces de navegación -->
+        <nav class="nav-principal">
+            <a href="index.html">SOBRE_MÍ</a>
+            <a href="ilustraciones.html">ILUSTRACIONES</a>
+            <a href="#">DISEÑO GRÁFICO</a>
+        </nav>
+
+        <!-- Lado Derecho: Botón de contacto -->
+        <div class="header-right">
+            <a href="contacto.html" class="nav-contacto">CONTÁCTAME <span class="arrow">→</span></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECCIÓN DE CONTACTO -->
+        <section class="seccion-contacto">
+            <!-- FORMULARIO LADO IZQUIERDO -->
+            <div class="contacto-imagen">
+                <img src="IMG/gif-contacto.gif" alt="Ilustración-contacto">
+            </div>
+
+            <!-- FORMULARIO LADO DERECHO -->
+            <div class="contacto-formulario">
+                <h1><span class="destacado">CHARLEMOS!</span></h1>
+
+                <form action="#" method="POST">
+
+                    <div class="campo-grupo">
+                        <label>// Nombre</label>
+                        <input type="text" name="nombre" required>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <label>// Email</label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="contacto-opciones">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="interes" value="ilustracion">
+                            <span class="checkmark"></span>
+                            Ilustración
+                        </label>
+
+                        <label class="custom-checkbox">
+                            <input type="checkbox" name="interes" value="diseño">
+                            <span class="checkmark"></span>
+                            Diseño Gráfico
+                        </label>
+                    </div>
+
+                    <div class="campo-grupo">
+                        <textarea name="mensaje" rows="5"
+                            placeholder="// CONTAME LOS DETALLES DE TU PRÓXIMO PROYECTO O CONSULTA //"></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">ENVIAR →</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CONTACTO -->
+    <footer class="footer-container">
+        <!-- Franja Superior -->
+        <div class="footer-superior">
+            <div class="footer-titulo-seccion">
+                <h3>¿Creamos <span class="palabra-color">JUNTOS</span>?</h3>
+            </div>
+
+            <div class="footer-derecha">
+                <img src="IMG/gif-index.gif" alt="Estrella" class="footer-estrella" width="80">
+                <p class="footer-info">/ Actualmente disponible para proyectos freelance, colaboraciones de ilustración
+                    y diseño de identidad visual. <span class="footer-contacto-link">¡HABLEMOS!...</span></p>
+            </div>
+        </div>
+
+        <!-- Franja Inferior -->
+        <div class="footer-inferior">
+            <p>
+                <span class="copy-destacado">&copy; 2026 – Hecho con diseño y café.</span> Todos los derechos
+                reservados.
+            </p>
+            <div class="footer-redes">
+                <a href="https://instagram.com" target="_blank"><img src="IMG/icono-instagram.png" alt="Instagram"
+                        width="39"></a>
+                <a href="https://behance.net" target="_blank"><img src="IMG/icono-behance.png" alt="Behance"
+                        width="39"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
